@@ -3,3 +3,8 @@ class Piece:
         self.name = name
         self.x = x
         self.y = y
+
+    def is_at_xy(self, x, y) -> bool:
+        """Sprawdza czy ten pionek jest
+        na współrzędnych x, y"""
+        ...

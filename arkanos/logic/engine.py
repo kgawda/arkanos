@@ -15,3 +15,8 @@ class Engine:
         piece.y = random.randrange(self.height)
         self.pieces.append(piece)
 
+    def pieces_at(self, x, y):
+        """Zwraca iterator po wszystkich pionkach znajdujących się
+        na współrzędnych x, y"""
+        ...
+            yield ...
