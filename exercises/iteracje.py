@@ -46,8 +46,20 @@ def main():
             #print(">>>", line, end="")
 
 
+    def jeden_dwa_trzy():
+        print("zaraz podam 1")
+        yield 1
+        print("zaraz podam 2")
+        yield 2
+        print("zaraz podam 3")
+        yield 3
+        print("koniec generowania")
 
-
+    l = []
+    for x in jeden_dwa_trzy():
+        print(x)
+        l.append(x)
+    assert l == [1, 2, 3]
 
 
 if __name__ == "__main__":
