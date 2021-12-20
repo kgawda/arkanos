@@ -18,5 +18,6 @@ class Engine:
     def pieces_at(self, x, y):
         """Zwraca iterator po wszystkich pionkach znajdujących się
         na współrzędnych x, y"""
-        ...
-            yield ...
+        for piece in self.pieces:
+            if piece.is_at_xy(x, y):
+                yield piece
