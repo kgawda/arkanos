@@ -1,0 +1,6 @@
+class ConsolePrinter:
+    def __init__(self, game_engine):
+        ...
+
+    def print(self):
+        ...
