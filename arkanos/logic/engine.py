@@ -1,5 +1,5 @@
 import random
-from typing import List
+from typing import List, Generator
 
 from logic.pieces import Piece
 
@@ -15,7 +15,7 @@ class Engine:
         piece.y = random.randrange(self.height)
         self.pieces.append(piece)
 
-    def pieces_at(self, x, y):
+    def pieces_at(self, x, y) -> Generator[Piece, None, None]:
         """Zwraca iterator po wszystkich pionkach znajdujących się
         na współrzędnych x, y"""
         for piece in self.pieces:

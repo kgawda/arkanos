@@ -1,6 +1,8 @@
+from logic.engine import Engine
+
 class ConsolePrinter:
-    def __init__(self, game_engine):
-        self.engine = game_engine
+    def __init__(self, game_engine: Engine):
+        self.engine: Engine = game_engine
 
     def print(self):
         for y in range(self.engine.height - 1, -1, -1):

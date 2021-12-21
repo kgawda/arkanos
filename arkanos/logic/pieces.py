@@ -8,3 +8,6 @@ class Piece:
         """Sprawdza czy ten pionek jest
         na współrzędnych x, y"""
         return self.x == x and self.y == y
+
+    def one_character(self):
+        return self.name[0]
