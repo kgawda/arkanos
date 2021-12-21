@@ -22,7 +22,11 @@ class Engine:
             if piece.is_at_xy(x, y):
                 yield piece
 
+    def can_move_to(self, x, y):
+        return (0 <= x < self.width) \
+               and (0 <= y < self.height)
+
     def play_round(self):
         for piece in self.pieces:
             #if isinstance(piece, ControlledPiece):
-            piece.act()
+            piece.act(self.can_move_to)

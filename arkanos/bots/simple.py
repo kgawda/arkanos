@@ -15,4 +15,10 @@ class DoNotihngBot(BaseBot):
 
 
 class RandomWalk(BaseBot):
-    pass  # TODO
+    def select_action(self):
+        delta = random.choice((1, -1))
+        if random.randint(0, 1):  # czy w poziomie
+            xy = (delta, 0)
+        else:
+            xy = (0, delta)
+        return ('move', xy)
