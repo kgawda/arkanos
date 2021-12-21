@@ -15,6 +15,10 @@ class Piece:
     def act(self):
         pass
 
+    def move_piece(self, delta_x, delta_y):
+        self.x += delta_x
+        self.y += delta_y
+
 
 class ControlledPiece(Piece):
     def __init__(self, name, x, y, controller):
@@ -25,5 +29,7 @@ class ControlledPiece(Piece):
         action_type, xy = self.controller.select_action()
         if action_type == 'pass':
             pass
+        elif action_type == "move":
+            self.move_piece(*xy)
         else:
             raise Exception("Unsupported action")
