@@ -1,8 +1,8 @@
 import random
 from typing import List, Generator
 
-from logic.pieces import Piece, ControlledPiece
-
+#from logic.pieces import Piece, ControlledPiece  # absolute import (problem przy testach)
+from .pieces import Piece, ControlledPiece  # relative import
 
 class Engine:
     def __init__(self, width, height):

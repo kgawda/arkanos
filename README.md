@@ -11,11 +11,18 @@ Create venv/virtualenv. Then (in case of venv):
 
 Test
 ----
+Prepare:
+`pip install mypy pytest`
 
-`mypy arkanos --check-untyped-defs`
+Run:
+- `mypy arkanos --check-untyped-defs`
+- `pytest`
+- `python -m doctest -v arkanos\logic\pieces.py`, or better: `pytest --doctest-modules`
 
 Links
 -----
 
 Gitignore taken from
 https://github.com/github/gitignore/raw/main/Python.gitignore
+
+Unicode shapes to be used: http://xahlee.info/comp/unicode_drawing_shapes.html 

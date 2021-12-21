@@ -1,4 +1,6 @@
-from logic.engine import Engine
+#from logic.engine import Engine
+from ..logic.engine import Engine
+
 
 class ConsolePrinter:
     def __init__(self, game_engine: Engine):

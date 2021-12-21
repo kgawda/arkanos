@@ -1,9 +1,9 @@
 import time
 
-from logic.pieces import Piece, ControlledPiece
-from logic.engine import Engine
-from ui.console import ConsolePrinter
-from bots.simple import DoNotihngBot, RandomWalk
+from game.logic.pieces import Piece, ControlledPiece
+from game.logic.engine import Engine
+from game.ui.console import ConsolePrinter
+from game.bots.simple import DoNotihngBot, RandomWalk
 
 
 def main() -> None:
