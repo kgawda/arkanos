@@ -1,7 +1,7 @@
 import random
 from typing import List, Generator
 
-from logic.pieces import Piece
+from logic.pieces import Piece, ControlledPiece
 
 
 class Engine:
@@ -21,3 +21,8 @@ class Engine:
         for piece in self.pieces:
             if piece.is_at_xy(x, y):
                 yield piece
+
+    def play_round(self):
+        for piece in self.pieces:
+            #if isinstance(piece, ControlledPiece):
+            piece.act()
