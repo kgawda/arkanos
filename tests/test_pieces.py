@@ -28,7 +28,3 @@ def test_fight(power1, power2, result):
     p1 = FightingPiece("Wojownik1", 0, 0, health=100, power=power1)
     p2 = FightingPiece("Wojownik2", 0, 0, health=100, power=power2)
     assert p1.fight(p2) == result
-
-@mark.xfail
-def test_to_nie_zadziala(engine):
-    engine.add_piece_in_random_place(123)
