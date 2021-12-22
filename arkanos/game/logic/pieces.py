@@ -50,16 +50,16 @@ class ControlledPiece(Piece):
             raise Exception("Unsupported action")
 
 class FightingPiece(Piece):
-    def __init__(self, name, x, y, health, *args, **kwargs):
+    def __init__(self, name, x, y, health, power, *args, **kwargs):
         # print("init FightingPiece")
         super().__init__(name, x, y, *args, **kwargs)
         self.health = health
-        self.power = 50
+        self.power = power
 
     def fight(self, other):
         if not isinstance(other, FightingPiece):
             return
-        if self.power > other.power:
+        if self.power >= other.power:
             winner = self
             looser = other
         else:
@@ -67,6 +67,7 @@ class FightingPiece(Piece):
             looser = self
         winner.power += 1
         looser.health = 0
+        return winner == self
 
 
 class ControlledFightingPiece(ControlledPiece, FightingPiece):
@@ -75,4 +76,4 @@ class ControlledFightingPiece(ControlledPiece, FightingPiece):
 # ControlledFightingPiece.__mro__ :
 # (<class 'arkanos.logic.pieces.ControlledFightingPiece'>, <class 'arkanos.logic.pieces.ControlledPiece'>, <class 'arkanos.logic.pieces.FightingPiece'>, <class 'arkanos.logic.pieces.Piece'>, <class 'object'>)
 
-# ControlledFightingPiece("Name", 0, 0, controller=None, health=100)
+# ControlledFightingPiece("Name", 0, 0, controller=None, health=100, power=50)
