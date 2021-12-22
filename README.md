@@ -1,6 +1,13 @@
 Przykładowy projekt Arkanos
 ===========================
 
+Build
+-----
+
+```commandline
+gcc -fpic --shared $(python3-config --includes) arkanos/c_extension/greetmodule.c -o greet.abi3.so
+```
+
 Run
 ---
 

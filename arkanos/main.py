@@ -31,6 +31,7 @@ def main() -> None:
         time.sleep(0.2)
 
 
-
 if __name__ == '__main__':
     main()
+    # import greet
+    # greet.greet("Arkanos")
