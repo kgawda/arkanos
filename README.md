@@ -12,7 +12,7 @@ Create venv/virtualenv. Then (in case of venv):
 Test
 ----
 Prepare:
-`pip install mypy pytest`
+`pip install mypy pytest coverage`
 
 Run:
 - `mypy arkanos --check-untyped-defs`
@@ -21,6 +21,9 @@ Run:
 - `python -m unittest ` to run only unittest-based tests
 - In PyCharm add new configuration, select "pytest", set project path or specific test, eg.: `...PycharmProjects/arkanos/tests/test_pieces.py::test_fight`
   You may add `--doctest-modules` as "Additional Arguments" 
+- `coverage run -m pytest` or `coverage run --branch -m pytest`
+  - then `coverage report`
+  - or `coverage html`
 
 With tox:
 ```commandline
