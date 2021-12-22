@@ -19,6 +19,8 @@ Run:
 - `pytest`
 - `python -m doctest -v arkanos\logic\pieces.py`, or better: `pytest --doctest-modules`
 - `python -m unittest ` to run only unittest-based tests
+- In PyCharm add new configuration, select "pytest", set project path or specific test, eg.: `...PycharmProjects/arkanos/tests/test_pieces.py::test_fight`
+  You may add `--doctest-modules` as "Additional Arguments" 
 
 Links
 -----
