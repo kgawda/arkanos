@@ -1,6 +1,5 @@
 import random
 from typing import List, Generator
-from pytest import mark
 
 #from logic.pieces import Piece, ControlledPiece  # absolute import (problem przy testach)
 from .pieces import Piece, ControlledPiece  # relative import
@@ -31,7 +30,3 @@ class Engine:
         for piece in self.pieces:
             #if isinstance(piece, ControlledPiece):
             piece.act(self.can_move_to)
-
-@mark.xfail
-def test_to_nie_zadziala(engine):
-    engine.add_piece_in_random_place(123)

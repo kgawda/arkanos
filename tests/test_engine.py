@@ -1,4 +1,4 @@
-from pytest import fixture
+from pytest import fixture, mark
 import random
 
 from arkanos.game.logic.engine import Engine
@@ -53,3 +53,7 @@ def test_random_place(engine, piece, monkeypatch_randrange):
     engine.add_piece_in_random_place(piece)
     assert piece.x == 3
     assert piece.y == 4
+
+@mark.xfail
+def test_to_nie_zadziala(engine):
+    engine.add_piece_in_random_place(123)
