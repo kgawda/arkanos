@@ -22,6 +22,12 @@ Run:
 - In PyCharm add new configuration, select "pytest", set project path or specific test, eg.: `...PycharmProjects/arkanos/tests/test_pieces.py::test_fight`
   You may add `--doctest-modules` as "Additional Arguments" 
 
+With tox:
+```commandline
+pip install tox
+tox
+```
+
 Links
 -----
 
