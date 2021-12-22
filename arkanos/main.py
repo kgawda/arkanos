@@ -21,10 +21,16 @@ def main() -> None:
     for p in engine.pieces:
         print(f"  {p.name} ({p.x}, {p.y})")
 
+    # import objgraph
+    # objgraph.show_backrefs(player1_controller, filename='backrefs.png', max_depth=8)
+    # objgraph.show_refs(printer, filename='refs.png', max_depth=8)
+
     while True:
         engine.play_round()
         printer.print()
         time.sleep(0.2)
+
+
 
 if __name__ == '__main__':
     main()
