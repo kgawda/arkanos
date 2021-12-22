@@ -18,6 +18,7 @@ Run:
 - `mypy arkanos --check-untyped-defs`
 - `pytest`
 - `python -m doctest -v arkanos\logic\pieces.py`, or better: `pytest --doctest-modules`
+- `python -m unittest ` to run only unittest-based tests
 
 Links
 -----
